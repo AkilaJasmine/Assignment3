@@ -10,21 +10,7 @@
 
     function foundItemsDirective() {
         var ddo = {
-            template: '<div ng-if="list.menuItems.length != 0">' +
-                            '<table>'+
-                                '<tr>'+
-                                    '<td>Item Name</td>'+
-                                    '<td>Item ShortName</td>'+
-                                    '<td>Item Description</td>'+
-                                '</tr>'+
-                                '<tr ng-repeat="item in list.menuItems">'+
-                                    '<td>{{item.name}}</td>'+
-                                    '<td>{{item.short_name}}</td>'+
-                                    '<td>{{item.description}}</td>'+
-                                    '<td><button ng-click="list.onRemove({index:$index})">'+ 'Dont want this one!</button>'+
-                                '</tr>'+
-                            '</table>'+
-                        '</div>',
+            templateUrl: "/directiveTemplate.html",
             restrict: "E",
             scope: {
                 list: '=foundItems',
